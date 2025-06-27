@@ -130,4 +130,4 @@ DUCKDNS_TOKEN="your_token"
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is released to the public domain - see the [LICENSE](LICENSE) file for details.
