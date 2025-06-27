@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-powershell:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Lint PowerShell script
+      shell: pwsh
+      run: |
+        Invoke-ScriptAnalyzer -Path windows/Update-DuckDNS.ps1 -Recurse
+
+  lint-bash:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Lint bash script
+      run: |
+        shellcheck linux/update-duckdns.sh 

@@ -1,0 +1,9 @@
+[Unit]
+Description=DuckDNS IP address updater
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/duckdns-autoupdate
+ExecStart=/usr/local/bin/update-duckdns.sh 

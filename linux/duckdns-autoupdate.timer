@@ -1,0 +1,10 @@
+[Unit]
+Description=Run DuckDNS updater hourly and on boot
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1h
+Unit=duckdns-autoupdate.service
+
+[Install]
+WantedBy=timers.target 
